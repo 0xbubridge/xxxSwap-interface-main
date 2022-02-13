@@ -1,3 +1,11 @@
+# How to use this repo
+Step 1. yarn
+Step 2. yarn start
+
+
+
+
+
 # Venomswap Interface
 
 [![Lint](https://github.com/Uniswap/uniswap-interface/workflows/Lint/badge.svg)](https://github.com/Uniswap/uniswap-interface/actions?query=workflow%3ALint)
