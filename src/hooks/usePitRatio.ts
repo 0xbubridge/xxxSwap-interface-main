@@ -1,5 +1,5 @@
 import { useMemo } from 'react'
-import { Fraction } from '@venomswap/sdk'
+import { Fraction } from '@xxxswap/sdk'
 
 import { utils } from 'ethers'
 import usePitToken from './usePitToken'

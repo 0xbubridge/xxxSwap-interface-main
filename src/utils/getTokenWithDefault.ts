@@ -1,5 +1,5 @@
-import { ChainId, Token, WETH } from '@venomswap/sdk'
-import { TOKENS } from '@venomswap/sdk-extra'
+import { ChainId, Token, WETH } from '@xxxswap/sdk'
+//import { TOKENS } from '@venomswap/sdk-extra'
 import { GOVERNANCE_TOKEN, ZERO_ONE_ADDRESS } from '../constants/index'
 
 export default function getTokenWithDefault(chainId: ChainId, symbol: string): Token {
@@ -13,8 +13,9 @@ export default function getTokenWithDefault(chainId: ChainId, symbol: string): T
       token = WETH[chainId]
       break
     default:
-      const retrievedToken = TOKENS[chainId].firstBySymbol(symbol)
-      token = retrievedToken ? retrievedToken : new Token(chainId, ZERO_ONE_ADDRESS, 18, symbol, symbol)
+      // const retrievedToken = TOKENS[chainId].firstBySymbol(symbol)
+      // token = retrievedToken ? retrievedToken : new Token(chainId, ZERO_ONE_ADDRESS, 18, symbol, symbol)
+      token = WETH[chainId]
       break
   }
 

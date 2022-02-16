@@ -1,4 +1,4 @@
-import { Blockchain } from '@venomswap/sdk'
+import { Blockchain } from '@xxxswap/sdk'
 
 export default function getExplorerName(blockchain: Blockchain): string {
   switch (blockchain) {
@@ -6,6 +6,8 @@ export default function getExplorerName(blockchain: Blockchain): string {
       return 'BSCScan'
     case Blockchain.HARMONY:
       return 'Harmony Explorer'
+    case Blockchain.LOCAL:
+      return 'Local Explorer'
     default:
       return 'Etherscan'
   }

@@ -1,4 +1,4 @@
-import { ChainId } from '@venomswap/sdk'
+import { ChainId } from '@xxxswap/sdk'
 import MULTICALL_ABI from './abi.json'
 
 const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {
@@ -10,7 +10,8 @@ const MULTICALL_NETWORKS: { [chainId in ChainId]: string } = {
   [ChainId.BSC_MAINNET]: '0xe348b292e8eA5FAB54340656f3D374b259D658b8',
   [ChainId.BSC_TESTNET]: '0xA58E7b772bdF535b4c8ebe61dEBdF2c3013748D1',
   [ChainId.HARMONY_MAINNET]: '0xFE4980f62D708c2A84D3929859Ea226340759320',
-  [ChainId.HARMONY_TESTNET]: '0xbcd3451992B923531615293Cb2b2c38ba8DE9529'
+  [ChainId.HARMONY_TESTNET]: '0xbcd3451992B923531615293Cb2b2c38ba8DE9529',
+  [ChainId.LOCAL_7545]: '0x65920fca20D1997516167b7D3196A18d08FaCB8e'
 }
 
 export { MULTICALL_ABI, MULTICALL_NETWORKS }

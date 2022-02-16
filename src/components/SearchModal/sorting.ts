@@ -1,4 +1,4 @@
-import { Token, TokenAmount } from '@venomswap/sdk'
+import { Token, TokenAmount } from '@xxxswap/sdk'
 import { useMemo } from 'react'
 import { useAllTokenBalances } from '../../state/wallet/hooks'
 

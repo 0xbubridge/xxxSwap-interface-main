@@ -1,4 +1,4 @@
-import { ChainId, JSBI } from '@venomswap/sdk'
+import { ChainId, JSBI } from '@xxxswap/sdk'
 import { BLOCKCHAIN_SETTINGS } from '@venomswap/sdk-extra'
 
 export default function getBlocksPerYear(chainId: ChainId | undefined): JSBI {

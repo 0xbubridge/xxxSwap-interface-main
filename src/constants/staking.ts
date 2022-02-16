@@ -1,4 +1,4 @@
-import { ChainId, Token } from '@venomswap/sdk'
+import { ChainId, Token } from '@xxxswap/sdk'
 import getPairTokensWithDefaults from '../utils/getPairTokensWithDefaults'
 
 export interface StakingRewardsInfo {

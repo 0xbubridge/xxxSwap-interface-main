@@ -1,4 +1,4 @@
-import { Blockchain } from '@venomswap/sdk'
+import { Blockchain } from '@xxxswap/sdk'
 
 // Returns the block time in seconds
 export default function getBlockchainBlockTime(blockchain: Blockchain): number {
@@ -7,6 +7,8 @@ export default function getBlockchainBlockTime(blockchain: Blockchain): number {
       return 3
     case Blockchain.HARMONY:
       return 2
+    case Blockchain.LOCAL:
+      return 1
     default:
       return 13
   }

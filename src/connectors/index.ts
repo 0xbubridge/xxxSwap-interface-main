@@ -7,7 +7,7 @@ import { PortisConnector } from '@web3-react/portis-connector'
 import { FortmaticConnector } from './Fortmatic'
 import { NetworkConnector } from './NetworkConnector'
 
-import { Blockchain, Currency } from '@venomswap/sdk'
+import { Blockchain, Currency } from '@xxxswap/sdk'
 
 import baseCurrencies from '../utils/baseCurrencies'
 import getBlockchain from '../utils/getBlockchain'
@@ -44,6 +44,9 @@ switch (BLOCKCHAIN) {
     break
   case Blockchain.HARMONY:
     supportedChainIds = [1666600000, 1666700000]
+    break
+  case Blockchain.LOCAL:
+    supportedChainIds = [1337]
     break
   default:
     supportedChainIds = [1, 3, 4, 5, 42]

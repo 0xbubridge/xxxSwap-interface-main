@@ -1,5 +1,5 @@
 import { BigNumber } from '@ethersproject/bignumber'
-import { ChainId, JSBI, Percent, Token, WETH } from '@venomswap/sdk'
+import { ChainId, JSBI, Percent, Token, WETH } from '@xxxswap/sdk'
 import { AbstractConnector } from '@web3-react/abstract-connector'
 
 import { fortmatic, injected, portis, walletconnect, walletlink } from '../connectors'
@@ -18,7 +18,8 @@ export const ROUTER_ADDRESSES: { [chainId in ChainId]: string } = {
   [ChainId.BSC_MAINNET]: ZERO_ONE_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x93B28DDc2C5bcaA2eab01281e369C75597b27128',
   [ChainId.HARMONY_MAINNET]: '0xf012702a5f0e54015362cBCA26a26fc90AA832a3',
-  [ChainId.HARMONY_TESTNET]: '0x8e9A3cE409B13ef459fE4448aE97a79d6Ecd8b4b'
+  [ChainId.HARMONY_TESTNET]: '0x8e9A3cE409B13ef459fE4448aE97a79d6Ecd8b4b',
+  [ChainId.LOCAL_7545]: '0x090Cbd92c82326F27374ED42f535a0313DF582BB'
 }
 
 export const GOVERNANCE_ADDRESS = '0x0de24BF4b7340A2b0967E0dBe7a569d3aD894ac8'
@@ -52,7 +53,8 @@ export const GOVERNANCE_TOKEN: { [chainId in ChainId]: Token } = {
     18,
     'VIPER',
     'Viper'
-  )
+  ),
+  [ChainId.LOCAL_7545]: new Token(ChainId.LOCAL_7545, '0xc30790951cD4aE0e412A44c54D6196edFa4148B3', 18, 'TEST', 'TEST')
 }
 
 export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
@@ -64,7 +66,8 @@ export const MASTER_BREEDER: { [chainId in ChainId]: string } = {
   [ChainId.BSC_MAINNET]: ZERO_ONE_ADDRESS,
   [ChainId.BSC_TESTNET]: '0xc9B89024bB053b9D82d9a229FDEb49F2Fdb654B4',
   [ChainId.HARMONY_MAINNET]: '0x7AbC67c8D4b248A38B0dc5756300630108Cb48b4',
-  [ChainId.HARMONY_TESTNET]: '0x651e2E555164834bc42303c1a1B4f795a9Fb7619'
+  [ChainId.HARMONY_TESTNET]: '0x651e2E555164834bc42303c1a1B4f795a9Fb7619',
+  [ChainId.LOCAL_7545]: '0xF340C7c62A25ae6a4b8aeabFc316dD914D02A3D8'
 }
 
 export const PIT_BREEDER: { [chainId in ChainId]: string } = {
@@ -76,7 +79,8 @@ export const PIT_BREEDER: { [chainId in ChainId]: string } = {
   [ChainId.BSC_MAINNET]: ZERO_ONE_ADDRESS,
   [ChainId.BSC_TESTNET]: '0x64a31eC4c1a4DFE3C5D36633a06A26773053fAFE',
   [ChainId.HARMONY_MAINNET]: '0x08913d353091e24B361f0E519e2f7aD07a78995d',
-  [ChainId.HARMONY_TESTNET]: '0x3945509547b74370468238F715e2dcf698a088B4'
+  [ChainId.HARMONY_TESTNET]: '0x3945509547b74370468238F715e2dcf698a088B4',
+  [ChainId.LOCAL_7545]: '0xa255771BAeA1151b97017926Cd54f11F7cFa2C3C'
 }
 
 export const PIT: { [chainId in ChainId]: Token } = {
@@ -106,6 +110,13 @@ export const PIT: { [chainId in ChainId]: Token } = {
     18,
     'xVIPER',
     'ViperPit'
+  ),
+  [ChainId.LOCAL_7545]: new Token(
+    ChainId.LOCAL_7545,
+    '0x7C318A9b203AC26DccA3253610b33F5504Df57DF',
+    18,
+    'xTEST',
+    'TESTPit'
   )
 }
 
@@ -118,7 +129,8 @@ export const PIT_SETTINGS: { [chainId in ChainId]: Record<string, string> } = {
   [ChainId.BSC_MAINNET]: { name: 'CobraDen', path: '/cobraDen' },
   [ChainId.BSC_TESTNET]: { name: 'CobraDen', path: '/cobraDen' },
   [ChainId.HARMONY_MAINNET]: { name: 'ViperPit', path: '/viperPit' },
-  [ChainId.HARMONY_TESTNET]: { name: 'ViperPit', path: '/viperPit' }
+  [ChainId.HARMONY_TESTNET]: { name: 'ViperPit', path: '/viperPit' },
+  [ChainId.LOCAL_7545]: { name: 'ViperPit', path: '/viperPit' }
 }
 
 export const WEB_INTERFACES: { [chainId in ChainId]: string[] } = {
@@ -130,7 +142,8 @@ export const WEB_INTERFACES: { [chainId in ChainId]: string[] } = {
   [ChainId.BSC_MAINNET]: ['cobra.exchange', 'cobraswap.io', 'cobradex.org'],
   [ChainId.BSC_TESTNET]: ['cobra.exchange', 'cobraswap.io', 'cobradex.org'],
   [ChainId.HARMONY_MAINNET]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org'],
-  [ChainId.HARMONY_TESTNET]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org']
+  [ChainId.HARMONY_TESTNET]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org'],
+  [ChainId.LOCAL_7545]: ['viper.exchange', 'viperswap.one', 'viperswap.com', 'viperswap.io', 'viperswap.org']
 }
 
 export { PRELOADED_PROPOSALS } from './proposals'
@@ -174,7 +187,8 @@ const WETH_ONLY: ChainTokenList = {
   [ChainId.BSC_MAINNET]: [WETH[ChainId.BSC_MAINNET]],
   [ChainId.BSC_TESTNET]: [WETH[ChainId.BSC_TESTNET]],
   [ChainId.HARMONY_MAINNET]: [WETH[ChainId.HARMONY_MAINNET]],
-  [ChainId.HARMONY_TESTNET]: [WETH[ChainId.HARMONY_TESTNET]]
+  [ChainId.HARMONY_TESTNET]: [WETH[ChainId.HARMONY_TESTNET]],
+  [ChainId.LOCAL_7545]: [WETH[ChainId.HARMONY_TESTNET]]
 }
 
 // used to construct intermediary pairs for trading
@@ -188,7 +202,8 @@ export const BASES_TO_CHECK_TRADES_AGAINST: ChainTokenList = {
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1USDC'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, 'VIPER'),
     getTokenWithDefault(ChainId.HARMONY_MAINNET, '1ETH'),
-    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'LINK')
+    getTokenWithDefault(ChainId.HARMONY_MAINNET, 'LINK'),
+    getTokenWithDefault(ChainId.LOCAL_7545, 'LINK')
   ]
 }
 

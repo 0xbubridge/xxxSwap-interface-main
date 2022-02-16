@@ -4,6 +4,7 @@
   "homepage": ".",
   "private": true,
   "devDependencies": {
+    "@xxxswap/sdk": "^1.0.1",
     "@ethersproject/experimental": "^5.1.2",
     "@popperjs/core": "^2.4.4",
     "@reach/dialog": "^0.10.3",
