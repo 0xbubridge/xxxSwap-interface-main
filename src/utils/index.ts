@@ -37,7 +37,7 @@ export function getEtherscanLink(
   type: 'transaction' | 'token' | 'address' | 'block'
 ): string {
   let prefix = `https://${ETHERSCAN_PREFIXES[chainId] || ETHERSCAN_PREFIXES[1]}`
-  prefix = [56, 97, 1666600000, 1666700000].includes(chainId) ? prefix : `${prefix}etherscan.io`
+  prefix = [56, 97, 1666600000, 1666700000, 1337].includes(chainId) ? prefix : `${prefix}etherscan.io`
 
   switch (type) {
     case 'transaction': {
