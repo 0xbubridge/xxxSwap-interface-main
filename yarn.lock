@@ -3850,10 +3850,10 @@
   resolved "https://registry.yarnpkg.com/@xtuc/long/-/long-4.2.2.tgz#d291c6a4e97989b5c61d9acf396ae4fe133a718d"
   integrity sha512-NuHqBY1PB/D8xU6s/thBgOAiAP7HOYDQ32+BFZILJ8ivkUkAHQnWfn6WhL79Owj1qmUnoN/YPhktdIoucipkAQ==
 
-"@xxxswap/sdk-extra@^1.0.7":
-  version "1.0.7"
-  resolved "https://registry.yarnpkg.com/@xxxswap/sdk-extra/-/sdk-extra-1.0.7.tgz#b387f37eb2fa422b055d651e3c52b1ea87347aa8"
-  integrity sha512-KiMMslofMCUo9NiIE3VRCyCKNDIut5pbST457YTyiW337AhgufaBkIStAB4h02ECVqU3D7i35/E2HlFMYkr6rw==
+"@xxxswap/sdk-extra@^1.0.9":
+  version "1.0.9"
+  resolved "https://registry.yarnpkg.com/@xxxswap/sdk-extra/-/sdk-extra-1.0.9.tgz#5cf9639baf14d1b19d1fc41c1a16001966316da4"
+  integrity sha512-G0CPSsWjetV3lzLsywC7w8XPfPoaGt/C2wR7SWRzXLHJWyanBveL5qwYbRI7NPTt4g8AEGzFgFgBDVIwSfsoog==
   dependencies:
     "@ethersproject/address" "^5.5.0"
     "@ethersproject/contracts" "^5.5.0"
@@ -3861,13 +3861,13 @@
     "@ethersproject/solidity" "^5.5.0"
     "@venomswap/community-token-list" "^2.5.0"
     "@venomswap/default-token-list" "^5.8.0"
-    "@xxxswap/sdk" "^1.0.5"
+    "@xxxswap/sdk" "^1.0.7"
     lodash.random "^3.2.0"
 
-"@xxxswap/sdk@^1.0.5":
-  version "1.0.5"
-  resolved "https://registry.yarnpkg.com/@xxxswap/sdk/-/sdk-1.0.5.tgz#ab17ba50531e67b48ca5cc70ec1f5eddae118dce"
-  integrity sha512-zba0HozaRSR7Hr8aUot8+3JPnw/14sh/PkZ7CYQ4vnrzZfaB/cQ0hLiS1Igmr/B/mH9O9IKm+rBHoPi6r4hsiA==
+"@xxxswap/sdk@^1.0.7":
+  version "1.0.7"
+  resolved "https://registry.yarnpkg.com/@xxxswap/sdk/-/sdk-1.0.7.tgz#f1758a86711f6ee841aeffbf7343f2862d427509"
+  integrity sha512-Ui/RKxg/+x0x95x2eHq+CQrS7evuwmLgmfEcKQEFbJ9QVj526IoiUh+vq+N0BXaKdACPaEeaeZuIVcjzE6lotg==
   dependencies:
     "@venomswap/core" "^1.0.0"
     big.js "^5.2.2"

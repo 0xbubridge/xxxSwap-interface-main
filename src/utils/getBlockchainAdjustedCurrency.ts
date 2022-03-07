@@ -1,4 +1,4 @@
-import { Blockchain, Currency, ETHER, BINANCE_COIN, HARMONY } from '@xxxswap/sdk'
+import { Blockchain, Currency, ETHER, BINANCE_COIN, TEST_COIN, HARMONY } from '@xxxswap/sdk'
 
 export default function getBlockchainAdjustedCurrency(
   blockchain: Blockchain,
@@ -11,6 +11,8 @@ export default function getBlockchainAdjustedCurrency(
       return BINANCE_COIN
     case Blockchain.HARMONY:
       return HARMONY
+    case Blockchain.LOCAL:
+      return TEST_COIN
     default:
       return ETHER
   }

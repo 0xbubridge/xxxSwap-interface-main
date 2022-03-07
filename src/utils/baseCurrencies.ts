@@ -1,4 +1,4 @@
-import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN, WETH } from '@xxxswap/sdk'
+import { ChainId, Currency, ETHER, HARMONY, BINANCE_COIN, TEST_COIN, WETH } from '@xxxswap/sdk'
 import { NETWORK_CHAIN_ID } from '../connectors'
 
 export default function baseCurrencies(chainId: ChainId | undefined): Currency[] {
@@ -14,6 +14,10 @@ export default function baseCurrencies(chainId: ChainId | undefined): Currency[]
       case 1666600000:
       case 1666700000:
         currencies.push(HARMONY)
+        currencies.push(WETH[chainId])
+        break
+      case 1337:
+        currencies.push(TEST_COIN)
         currencies.push(WETH[chainId])
         break
       default:

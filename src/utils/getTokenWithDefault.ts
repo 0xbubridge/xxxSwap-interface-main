@@ -1,5 +1,5 @@
 import { ChainId, Token, WETH } from '@xxxswap/sdk'
-//import { TOKENS } from '@venomswap/sdk-extra'
+//import { TOKENS } from '@xxxswap/sdk-extra'
 import { GOVERNANCE_TOKEN, ZERO_ONE_ADDRESS } from '../constants/index'
 
 export default function getTokenWithDefault(chainId: ChainId, symbol: string): Token {

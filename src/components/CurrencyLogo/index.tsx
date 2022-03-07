@@ -48,7 +48,7 @@ export default function CurrencyLogo({
     if (currency && DEFAULT_CURRENCIES.includes(currency)) return []
 
     if (currency instanceof Token) {
-      const logoUrlLocation = [56, 97, 1666600000, 1666700000].includes(currency.chainId)
+      const logoUrlLocation = [56, 97, 1666600000, 1666700000, 1337].includes(currency.chainId)
         ? getTokenFallbackLogoURL(currency)
         : getTokenLogoURL(currency.address)
 
